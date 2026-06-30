@@ -1,0 +1,47 @@
+tasks_database = [
+    {"task": 1, "Name of task": "Type of Task"}
+]
+
+
+1. CREATE (Add task)
+
+def create_task(task, Name of task, Type of task):
+    new_task = {"task": task, "Name of task": Name of task, "Type of Task": Type of Task}
+    tasks_database.append(new_task)
+    print("Success: '{Name of task}' has been added.")
+
+
+2. READ (View task)
+
+def read_all_tasks():
+    print("\n--- Current Tasks List ---")
+    if not tasks_database:
+        print("The database is empty.")
+        return
+        
+    for task in tasks_database:
+        print("task: {task['task']} | Name of task: {task['Name of task']} | Type of task: {task['Type of task']}")
+    print("-------------------------\n")
+
+
+3. UPDATE (Modify task)
+
+def update_tasks(task, Name of task, Type of task):
+    for task in tasks_database:
+        if task["task"] == tasks_task:
+            task["Name of task"] = new_Name of task
+            task["Type of task"] = new_Type of task
+            print("Success: Task {tasks_task} has been updated.")
+            return
+    print("Error: Task {task} not found.")
+
+
+4. DELETE (Remove task)
+
+def delete_task(tasks_task):
+    for task in tasks_database:
+        if tasks["task"] == tasks_task:
+            tasks_database.remove(task)
+            print("Success: Task {task} has been deleted.")
+            return
+    print("Error: Tasks {tasks_task} not found.")
